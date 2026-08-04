@@ -1,1 +1,1027 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>BÁO CÁO HOẠT ĐỘNG CREATIVE HUB</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0A2540',
+                            dark: '#061729',
+                            light: '#14385C',
+                            accent: '#1D4ED8'
+                        },
+                        beige: {
+                            DEFAULT: '#FAF7F2',
+                            light: '#FCFAF7',
+                            card: '#FFFFFF',
+                            subtle: '#F4EFE6',
+                            border: '#E6DFD3'
+                        },
+                        gold: {
+                            DEFAULT: '#B88E32',
+                            light: '#D4AF37',
+                            dark: '#946E1E',
+                            badge: '#FBF4E2'
+                        },
+                        crimson: {
+                            DEFAULT: '#8B1E23',
+                            light: '#A62B31',
+                            badge: '#FDF2F2'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'soft-card': '0 10px 30px -5px rgba(10, 37, 64, 0.05), 0 2px 8px -2px rgba(10, 37, 64, 0.03)',
+                        'card-hover': '0 20px 40px -10px rgba(10, 37, 64, 0.1), 0 0 15px rgba(184, 142, 50, 0.2)',
+                        'badge-glow': '0 2px 10px rgba(184, 142, 50, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(180deg, #FAF7F2 0%, #F5F0E6 50%, #FAF7F2 100%);
+            background-attachment: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1E293B;
+            -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+        }
+
+        /* Smooth tab transition */
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Custom Scrollbar for horizontal tab bar and tables */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4EFE6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B88E32;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #946E1E;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-gold selection:text-white">
+
+    <header class="w-full bg-white/95 border-b border-beige-border sticky top-0 z-50 shadow-sm backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 flex flex-row items-center justify-between gap-2 sm:gap-4">
+            
+            <!-- Left: Logo Khối KHBL & Supporting Center -->
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center justify-center shrink-0">
+                    <img src="logo_KHBL.png" alt="KHBL Logo" class="h-9 sm:h-11 md:h-12 w-auto object-contain max-w-[120px] sm:max-w-none" onerror="this.classList.add('hidden'); document.getElementById('logoFallback').classList.remove('hidden');">
+                    <div id="logoFallback" class="hidden bg-navy px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-white font-bold tracking-wider text-base sm:text-xl shadow">
+                        <span class="font-sans font-extrabold tracking-widest text-white">KHBL</span>
+                    </div>
+                </div>
+                <div class="border-l border-beige-border pl-2.5 sm:pl-4">
+                    <h1 class="font-sans font-extrabold text-navy text-sm sm:text-xl md:text-2xl tracking-wide uppercase leading-tight">CREATIVE HUB</h1>
+                    <p class="font-sans text-[10px] sm:text-xs text-slate-500 font-semibold tracking-widest uppercase">SUPPORTING CENTER</p>
+                </div>
+            </div>
+
+            <!-- Right: Badge Báo Cáo Hoạt Động -->
+            <div class="flex items-center shrink-0">
+                <div class="bg-crimson-badge border border-crimson/20 rounded-full px-3 py-1.5 sm:px-5 sm:py-2 flex items-center gap-1.5 sm:gap-2.5 shadow-sm text-crimson font-sans text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide">
+                    <i class="fa-solid fa-ribbon text-crimson text-xs sm:text-base"></i>
+                    <span class="uppercase font-sans font-bold">BÁO CÁO HOẠT ĐỘNG CREATIVE HUB</span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8 flex-grow w-full">
+        
+        <!-- LEVEL 1: MAIN TABS (TEAM DESIGN / TEAM CONTENT) -->
+        <div class="flex justify-center mb-5 sm:mb-6">
+            <div class="bg-[#EBE7DF] p-1.5 rounded-full border border-beige-border shadow-inner flex gap-1.5 sm:gap-2 max-w-sm sm:max-w-md w-full">
+                <button onclick="switchMainTab('design')" id="mainTab-design" class="flex-1 px-3 sm:px-7 py-2.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 bg-crimson text-white shadow-md active:scale-[0.98]">
+                    <i class="fa-solid fa-feather-pointed text-xs sm:text-sm"></i>
+                    <span>TEAM DESIGN</span>
+                </button>
+                <button onclick="switchMainTab('content')" id="mainTab-content" class="flex-1 px-3 sm:px-7 py-2.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 text-slate-600 hover:text-navy active:scale-[0.98]">
+                    <i class="fa-solid fa-file-lines text-xs sm:text-sm"></i>
+                    <span>TEAM CONTENT</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- LEVEL 2: SUB TABS (DESIGN TEAM) -->
+        <div id="subTabsNav-design" class="flex justify-center mb-6 sm:mb-10 transition-all w-full">
+            <div class="bg-white p-1.5 rounded-2xl sm:rounded-full border border-beige-border shadow-soft-card flex flex-wrap sm:flex-nowrap justify-center items-center gap-1.5 sm:gap-2 max-w-3xl w-full">
+                <button onclick="switchSubTab('design', 'du-an')" id="subTab-design-du-an" class="flex-1 min-w-[100px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight bg-navy text-white shadow">
+                    <i class="fa-regular fa-star text-gold-light text-[10px] sm:text-xs shrink-0"></i>
+                    <span>DỰ ÁN NỔI BẬT</span>
+                </button>
+                <button onclick="switchSubTab('design', 'vai-tro')" id="subTab-design-vai-tro" class="flex-1 min-w-[110px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight text-slate-600 hover:text-navy hover:bg-beige-subtle">
+                    <i class="fa-solid fa-sitemap text-gold text-[10px] sm:text-xs shrink-0"></i>
+                    <span>VAI TRÒ CREATIVE HUB</span>
+                </button>
+                <button onclick="switchSubTab('design', 'powerhouse')" id="subTab-design-powerhouse" class="flex-1 min-w-[110px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight text-slate-600 hover:text-navy hover:bg-beige-subtle">
+                    <i class="fa-solid fa-bolt text-gold text-[10px] sm:text-xs shrink-0"></i>
+                    <span>PRODUCT POWERHOUSE</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- LEVEL 2: SUB TABS (CONTENT TEAM) -->
+        <div id="subTabsNav-content" class="hidden justify-center mb-6 sm:mb-10 transition-all w-full">
+            <div class="bg-white p-1.5 rounded-2xl sm:rounded-full border border-beige-border shadow-soft-card flex flex-wrap sm:flex-nowrap justify-center items-center gap-1.5 sm:gap-2 max-w-3xl w-full">
+                <button onclick="switchSubTab('content', 'du-an')" id="subTab-content-du-an" class="flex-1 min-w-[100px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight bg-navy text-white shadow">
+                    <i class="fa-regular fa-star text-gold-light text-[10px] sm:text-xs shrink-0"></i>
+                    <span>DỰ ÁN NỔI BẬT</span>
+                </button>
+                <button onclick="switchSubTab('content', 'vai-tro')" id="subTab-content-vai-tro" class="flex-1 min-w-[110px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight text-slate-600 hover:text-navy hover:bg-beige-subtle">
+                    <i class="fa-solid fa-sitemap text-gold text-[10px] sm:text-xs shrink-0"></i>
+                    <span>VAI TRÒ CREATIVE HUB</span>
+                </button>
+                <button onclick="switchSubTab('content', 'gtm')" id="subTab-content-gtm" class="flex-1 min-w-[120px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight text-slate-600 hover:text-navy hover:bg-beige-subtle">
+                    <i class="fa-solid fa-bullhorn text-gold text-[10px] sm:text-xs shrink-0"></i>
+                    <span>HỖ TRỢ TRUYỀN THÔNG GTM</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT: DESIGN - DỰ ÁN NỔI BẬT -->
+        <div id="content-design-du-an" class="tab-content active">
+            <div class="text-center mb-6 sm:mb-10">
+                <h2 class="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-navy uppercase tracking-wider mb-1 sm:mb-2">DỰ ÁN NỔI BẬT</h2>
+                <p class="font-sans text-slate-600 text-xs sm:text-sm md:text-base font-medium italic">Tối ưu điểm chạm số và thúc đẩy doanh thu</p>
+                <div class="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2 sm:mt-3"></div>
+            </div>
+
+            <!-- 3 Columns Responsive Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-start">
+                
+                <!-- Card 1: Chương Trình Trang Sức Tháng 7 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="relative z-10 space-y-4">
+                        
+                        <!-- Header Baseline Aligned -->
+                        <div class="text-center h-[105px] sm:h-[115px] flex flex-col justify-between">
+                            <span class="font-sans text-[11px] sm:text-xs font-bold text-gold uppercase tracking-wider block">TĂNG DT HÀNG MỚI</span>
+                            <div class="flex-1 flex items-center justify-center">
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy uppercase leading-snug">CHƯƠNG TRÌNH<br>TRANG SỨC THÁNG 7</h3>
+                            </div>
+                        </div>
+
+                        <!-- TẦNG: HIỆU QUẢ HOẠT ĐỘNG CHI TIẾT -->
+                        <div class="bg-beige-subtle/80 rounded-2xl p-4 border border-gold/30 text-center shadow-sm h-[140px] sm:h-[145px] flex flex-col justify-between">
+                            <div class="pb-2 border-b border-gold/20 shrink-0">
+                                <h4 class="font-sans text-[11px] sm:text-xs font-bold text-gold-dark uppercase tracking-wider">
+                                    HIỆU QUẢ CHƯƠNG TRÌNH
+                                </h4>
+                                <span class="font-sans font-normal text-slate-500 text-[10px] sm:text-[11px] block mt-0.5">(4/7 - 27/7)</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2 divide-x divide-gold/20 items-center my-auto">
+                                <!-- Doanh Thu -->
+                                <div class="px-1">
+                                    <div class="font-serif font-extrabold text-2xl sm:text-3xl text-crimson tracking-tight leading-none mb-1 flex items-baseline justify-center gap-1">
+                                        <span>1,777.80</span>
+                                        <span class="text-base sm:text-lg font-bold font-serif">Tỷ</span>
+                                    </div>
+                                    <div class="font-sans font-extrabold text-xs sm:text-sm text-navy uppercase tracking-wider">
+                                        DOANH THU
+                                    </div>
+                                </div>
+
+                                <!-- Tổng Số Bill -->
+                                <div class="px-1">
+                                    <div class="font-serif font-extrabold text-2xl sm:text-3xl text-crimson tracking-tight leading-none mb-1">
+                                        68,439
+                                    </div>
+                                    <div class="font-sans font-extrabold text-xs sm:text-sm text-navy uppercase tracking-wider">
+                                        TỔNG SỐ BILL
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HOẠT ĐỘNG TRUYỀN THÔNG (Căn chiều cao cố định để 2 video bắt đầu đúng 1 line) -->
+                        <div class="pt-3 border-t border-beige-border/80 h-[155px] sm:h-[160px] flex flex-col justify-start">
+                            <h4 class="font-sans text-xs sm:text-sm font-bold text-navy uppercase tracking-wider text-center mb-2.5">
+                                Hoạt động truyền thông
+                            </h4>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-sans">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-layer-group text-gold text-sm mt-0.5 shrink-0"></i>
+                                    <span class="italic font-medium text-slate-700">Adapt material, bộ performance</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-desktop text-gold text-sm mt-0.5 shrink-0"></i>
+                                    <span class="italic font-medium text-slate-700">Banner chạy ads trên Google / Facebook</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-globe text-gold text-sm mt-0.5 shrink-0"></i>
+                                    <span class="italic font-medium text-slate-700">Truyền thông rộng khắp qua Zalo và Blog</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- TẦNG 3: MEDIA VIDEO & BANNER -->
+                        <div class="space-y-3 pt-2">
+                            <div class="rounded-xl overflow-hidden border border-beige-border shadow-sm bg-black/5">
+                                <video src="VIDEO CT TS T7 (vuong).mp4" controls autoplay loop muted playsinline class="w-full h-auto max-h-[260px] object-cover rounded-xl"></video>
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-beige-border shadow-sm bg-beige-subtle">
+                                <img src="1200 x 628 KPN CTT& Retail.png" alt="1200 x 628 KPN CTT& Retail" class="w-full h-auto object-cover rounded-xl hover:scale-[1.02] transition-transform duration-300" onerror="this.src='1200 x 628 KPN CTT& Retail.jpg'">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-beige-border text-center font-sans text-[11px] sm:text-xs text-slate-400">
+                        Creative Hub Supporting Center
+                    </div>
+                </div>
+
+                <!-- Card 2: NGÀY ĐÔI 8.8 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="relative z-10 space-y-4">
+                        
+                        <!-- Header Baseline Aligned -->
+                        <div class="text-center h-[105px] sm:h-[115px] flex flex-col justify-between">
+                            <span class="font-sans text-[11px] sm:text-xs font-bold text-gold uppercase tracking-wider block">TĂNG DT và PHÁT TRIỂN KHM</span>
+                            <div class="flex-1 flex items-center justify-center flex-col">
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy uppercase leading-snug">NGÀY ĐÔI 8.8</h3>
+                                <span class="font-sans text-xs text-slate-500 font-medium italic mt-0.5">On-air (03/08 – 14/08)</span>
+                            </div>
+                        </div>
+
+                        <!-- TẦNG 1: LEADS KỲ VỌNG MANG VỀ -->
+                        <div class="bg-beige-subtle/80 rounded-2xl p-4 border border-gold/30 text-center shadow-sm h-[140px] sm:h-[145px] flex flex-col justify-between">
+                            <h4 class="font-sans text-[11px] sm:text-xs font-bold text-gold-dark uppercase tracking-wider pb-2 border-b border-gold/20 shrink-0">
+                                HIỆU QUẢ KỲ VỌNG
+                            </h4>
+                            <div class="my-auto">
+                                <div class="font-serif font-extrabold text-3xl sm:text-4xl text-crimson tracking-tight leading-none mb-1">
+                                    9.200
+                                </div>
+                                <div class="font-sans font-extrabold text-xs sm:text-sm text-navy uppercase tracking-wider">
+                                    KỲ VỌNG MANG VỀ LEADS
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TẦNG 2: HOẠT ĐỘNG THIẾT KẾ (Căn chiều cao cố định để 2 video bắt đầu đúng 1 line) -->
+                        <div class="pt-3 border-t border-beige-border/80 h-[155px] sm:h-[160px] flex flex-col justify-start">
+                            <h4 class="font-sans text-xs sm:text-sm font-bold text-navy uppercase tracking-wider text-center mb-1">
+                                Thiết kế full material cho CT
+                            </h4>
+                            <div class="w-10 h-0.5 bg-gold/40 mx-auto mb-2 sm:mb-2.5"></div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-sans">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-palette text-gold text-sm mt-0.5 shrink-0"></i>
+                                    <span class="italic font-medium text-slate-700">Thiết kế visual, adapt banner/ performance</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-pen-ruler text-gold text-sm mt-0.5 shrink-0"></i>
+                                    <span class="italic font-medium text-slate-700">Design Artwork LDP, Popup, POSM</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-film text-gold text-sm mt-0.5 shrink-0"></i>
+                                    <span class="italic font-medium text-slate-700">Video animation</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- TẦNG 3: MEDIA VIDEO & BANNER -->
+                        <div class="space-y-3 pt-2">
+                            <div class="rounded-xl overflow-hidden border border-beige-border shadow-sm bg-black/5">
+                                <video src="NGAY DOI T8 (vuong).mp4" controls autoplay loop muted playsinline class="w-full h-auto max-h-[260px] object-cover rounded-xl"></video>
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-beige-border shadow-sm bg-beige-subtle">
+                                <img src="1200x628 KPN 88.png" alt="1200x628 KPN 88" class="w-full h-auto object-cover rounded-xl hover:scale-[1.02] transition-transform duration-300" onerror="this.src='1200x628 KPN 88.jpg'">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-beige-border text-center font-sans text-[11px] sm:text-xs text-slate-400">
+                        Creative Hub Supporting Center
+                    </div>
+                </div>
+
+                <!-- Card 3: Chương trình Payday -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden md:col-span-2 lg:col-span-1">
+                    <div class="relative z-10 space-y-4">
+                        
+                        <!-- Header Baseline Aligned -->
+                        <div class="text-center h-[105px] sm:h-[115px] flex flex-col justify-between">
+                            <span class="font-sans text-[11px] sm:text-xs font-bold text-gold uppercase tracking-wider block">TĂNG DT HÀNG MỚI</span>
+                            <div class="flex-1 flex items-center justify-center">
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy uppercase leading-snug">CHƯƠNG TRÌNH<br>PAYDAY</h3>
+                            </div>
+                        </div>
+
+                        <!-- Highlight Banner -->
+                        <div class="bg-beige-subtle/80 border border-beige-border rounded-xl p-4 sm:p-5 text-center">
+                            <span class="font-serif text-xl sm:text-2xl font-bold text-navy block">E-BROCHURE <span class="text-xs sm:text-sm font-sans font-normal text-slate-600">(SN PNJ 38)</span></span>
+                            <span class="font-sans text-xs text-crimson font-medium italic">(Tích hợp catalogue & Video)</span>
+                        </div>
+
+                        <!-- Key Metrics -->
+                        <div class="space-y-3 sm:space-y-4 font-sans">
+                            <div class="text-center bg-white p-3.5 sm:p-4 rounded-xl border border-beige-border shadow-sm">
+                                <span class="font-serif font-extrabold text-3xl sm:text-4xl text-crimson block tracking-tight">2,547</span>
+                                <span class="font-sans text-[11px] sm:text-xs text-slate-600 font-bold uppercase tracking-wider">Lượt xem E-Brochure <span class="text-slate-400 font-normal">(1,340 Users)</span></span>
+                            </div>
+
+                            <div class="bg-beige-subtle/50 rounded-xl p-3.5 sm:p-4 border border-beige-border">
+                                <h4 class="font-sans text-[11px] sm:text-xs font-bold text-gold-dark uppercase tracking-wider text-center mb-2.5">HIỆU QUẢ TƯƠNG TÁC & CHUYỂN ĐỔI</h4>
+                                <div class="space-y-2 text-center font-sans">
+                                    <div class="border-b border-beige-border pb-2">
+                                        <div class="font-serif font-bold text-xl sm:text-2xl text-crimson">46.8%</div>
+                                        <div class="text-[11px] sm:text-xs text-slate-700 font-bold uppercase">TỶ LỆ CLICK</div>
+                                        <div class="text-[10px] sm:text-[11px] text-slate-500">(1,192 clicks)</div>
+                                    </div>
+                                    <div class="pt-1">
+                                        <div class="text-xs font-semibold text-slate-600">Nội dung bổ sung</div>
+                                        <div class="text-xs text-slate-400">[Nội dung chi tiết sẽ cập nhật sau]</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-beige-border text-center font-sans text-[11px] sm:text-xs text-slate-400">
+                        Creative Hub Supporting Center
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB CONTENT: DESIGN - VAI TRÒ CREATIVE HUB -->
+        <div id="content-design-vai-tro" class="tab-content">
+            <div class="text-center mb-6 sm:mb-10">
+                <h2 class="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-navy uppercase tracking-wider mb-1 sm:mb-2">VAI TRÒ CREATIVE HUB CỦA K.KHBL</h2>
+                <p class="font-sans text-slate-600 text-xs sm:text-sm md:text-base font-medium italic">Đảm bảo tính nhất quán giữa Branding và Commercial</p>
+                <div class="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2 sm:mt-3"></div>
+            </div>
+
+            <!-- Grid 6 Phòng Ban -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 font-sans">
+                
+                <!-- Department 1: KHCS -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-navy text-white flex items-center justify-center font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-users text-base sm:text-lg"></i>
+                            </div>
+                            <h3 class="font-sans font-bold text-navy text-base sm:text-lg tracking-wide">KHCS</h3>
+                        </div>
+                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-700 min-h-[120px] sm:min-h-[140px]">
+                            <p class="font-semibold text-slate-800">23 KV, poster cho các CT (Khối / sub - brand):</p>
+                            <ul class="space-y-1.5 list-disc list-inside text-slate-600 leading-relaxed">
+                                <li>THI ĐUA NỘI BỘ</li>
+                                <li>KHEN THƯỞNG (CHƯƠNG TRÌNH NHẬT BẢN, HỘI AN)</li>
+                                <li>POSTER THÔNG BÁO</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
+                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị hình ảnh / Poster sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <!-- Department 2: OMNI-MKT -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gold text-white flex items-center justify-center font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-bullseye text-base sm:text-lg"></i>
+                            </div>
+                            <h3 class="font-sans font-bold text-navy text-base sm:text-lg tracking-wide">OMNI MKT</h3>
+                        </div>
+                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-700 min-h-[120px] sm:min-h-[140px]">
+                            <p class="font-semibold text-slate-800">Thiết kế KV/ Videos, adapt các hạng mục:</p>
+                            <ul class="space-y-1.5 list-disc list-inside text-slate-600 leading-relaxed">
+                                <li>TAB SALE tháng 5-6</li>
+                                <li>Chương trình SN PNJ 38, CT SUMMER và Dự án KIM BẢO NGŨ HÀNH</li>
+                                <li>Chương trình Thu Hút Khách Hàng Tiềm Năng</li>
+                                <li>PRODUCT DRIVEN (TS Ý, CZ, ECZ, TS CƯỜI...)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
+                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị hình ảnh / Banner Adapt sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <!-- Department 3: CLHH -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-crimson text-white flex items-center justify-center font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-award text-base sm:text-lg"></i>
+                            </div>
+                            <h3 class="font-sans font-bold text-navy text-base sm:text-lg tracking-wide">CLHH</h3>
+                        </div>
+                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-700 min-h-[120px] sm:min-h-[140px]">
+                            <p class="font-semibold text-slate-800 uppercase">SẢN XUẤT NỘI DUNG, THIẾT KẾ KV, SẢN XUẤT VIDEOS CÁC HẠNG MỤC:</p>
+                            <ul class="space-y-1.5 list-disc list-inside text-slate-600 leading-relaxed">
+                                <li>E- BROCHURE SN PNJ</li>
+                                <li>SẢN XUẤT VIDEO ONSITE (281 SKU)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
+                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị Video / Catalogue sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <!-- Department 4: PNS -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-navy text-white flex items-center justify-center font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-gem text-base sm:text-lg"></i>
+                            </div>
+                            <h3 class="font-sans font-bold text-navy text-base sm:text-lg tracking-wide">PNS</h3>
+                        </div>
+                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-700 min-h-[120px] sm:min-h-[140px]">
+                            <p class="font-semibold text-slate-800">ADAPT TRÊN 30 HẠNG MỤC CHƯƠNG TRÌNH 8.3:</p>
+                            <p class="text-slate-600">STANDEE GIFTZONE, VIETTEL...</p>
+                            <p class="font-semibold text-slate-800 mt-2">DESIGN BANNER, VOUCHER CHƯƠNG TRÌNH 8.3 NĂM THÔNG QUA ZMP</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
+                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị hình ảnh / Artwork sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <!-- Department 5: RETAIL MKT -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gold text-white flex items-center justify-center font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-store text-base sm:text-lg"></i>
+                            </div>
+                            <h3 class="font-sans font-bold text-navy text-base sm:text-lg tracking-wide">RETAIL MKT</h3>
+                        </div>
+                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-700 min-h-[120px] sm:min-h-[140px]">
+                            <p class="font-semibold text-slate-800">ADAPT 60 HẠNG MỤC CT SN PNJ TỪ MASTER KV CHO CÁC SUB- BRAND.</p>
+                            <ul class="space-y-1.5 list-disc list-inside text-slate-600 leading-relaxed">
+                                <li>POSM tại điểm bán</li>
+                                <li>Thiết kế POSM Khai trương / Re-open</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
+                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị POSM / Retail sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <!-- Department 6: CX-CS -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-crimson text-white flex items-center justify-center font-bold shadow-sm shrink-0">
+                                <i class="fa-solid fa-heart text-base sm:text-lg"></i>
+                            </div>
+                            <h3 class="font-sans font-bold text-navy text-base sm:text-lg tracking-wide">CX - CS</h3>
+                        </div>
+                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-700 min-h-[120px] sm:min-h-[140px]">
+                            <p class="font-semibold text-crimson">CS: THIẾT KẾ THÔNG BÁO CHÍNH SÁCH THU ĐỔI ECZ, VOC...</p>
+                            <p class="text-slate-600">Ghi nhận đánh giá chất lượng dịch vụ (Standee QR code)</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
+                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị QR Code / Banner CS sẽ điền sau]</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB CONTENT: DESIGN - PRODUCT POWERHOUSE -->
+        <div id="content-design-powerhouse" class="tab-content">
+            <div class="text-center mb-6 sm:mb-10">
+                <h2 class="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-navy uppercase tracking-wider mb-2">PRODUCT POWERHOUSE</h2>
+                <div class="inline-block bg-navy px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full text-white font-sans font-bold text-xs sm:text-sm tracking-widest my-1 sm:my-2 uppercase shadow-sm">
+                    ONSITE - PNJ.COM.VN
+                </div>
+                <p class="font-sans text-slate-600 text-xs sm:text-sm md:text-base font-medium mt-1">NÂNG CẤP HÌNH ẢNH SẢN PHẨM MỚI: <span class="font-bold text-crimson uppercase">TĂNG TỶ LỆ CHUYỂN ĐỔI MUA HÀNG.</span></p>
+                <div class="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2 sm:mt-3"></div>
+            </div>
+
+            <!-- Dashboard Tiến độ SKU Overview -->
+            <div class="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-soft-card border border-beige-border mb-6 sm:mb-8 max-w-4xl mx-auto font-sans">
+                <h3 class="font-serif font-bold text-xl sm:text-2xl md:text-3xl text-navy text-center uppercase mb-4 sm:mb-6 tracking-wide">
+                    TIẾN ĐỘ SẢN XUẤT (SKU)
+                </h3>
+
+                <div class="space-y-4 sm:space-y-6">
+                    <!-- Item 1: Hình Ảnh Sản Phẩm -->
+                    <div class="bg-beige-subtle/70 rounded-xl p-3.5 sm:p-5 border border-beige-border">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 sm:mb-3">
+                            <div class="flex items-center gap-2.5 sm:gap-3">
+                                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-navy text-white flex items-center justify-center font-bold shrink-0">
+                                    <i class="fa-regular fa-image text-base sm:text-xl"></i>
+                                </div>
+                                <span class="font-sans font-bold text-navy text-sm sm:text-base">HÌNH ẢNH SẢN PHẨM</span>
+                            </div>
+                            <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm ml-auto sm:ml-0">
+                                <div>
+                                    <span class="text-slate-500 block text-[9px] sm:text-[10px] uppercase font-bold">TARGET 2026</span>
+                                    <span class="font-sans font-bold text-slate-800">7,000 <span class="text-[10px] font-normal">SKU</span></span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-slate-500 block text-[9px] sm:text-[10px] uppercase font-bold">ĐÃ CHỤP</span>
+                                    <span class="font-sans font-bold text-navy text-base sm:text-lg">2,653 <span class="text-[10px] font-normal">SKU</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2.5 sm:h-3 overflow-hidden border border-slate-300">
+                            <div class="bg-navy h-full rounded-full transition-all duration-1000" style="width: 37.9%"></div>
+                        </div>
+                        <div class="text-right text-[11px] sm:text-xs font-bold text-navy mt-1.5">37.9% Hoàn thành</div>
+                    </div>
+
+                    <!-- Item 2: Video 360 Độ -->
+                    <div class="bg-beige-subtle/70 rounded-xl p-3.5 sm:p-5 border border-beige-border">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 sm:mb-3">
+                            <div class="flex items-center gap-2.5 sm:gap-3">
+                                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gold text-white flex items-center justify-center font-bold shrink-0">
+                                    <i class="fa-solid fa-rotate text-base sm:text-xl"></i>
+                                </div>
+                                <span class="font-sans font-bold text-navy text-sm sm:text-base">VIDEO 360 ĐỘ</span>
+                            </div>
+                            <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm ml-auto sm:ml-0">
+                                <div>
+                                    <span class="text-slate-500 block text-[9px] sm:text-[10px] uppercase font-bold">TARGET 2026</span>
+                                    <span class="font-sans font-bold text-slate-800">540 <span class="text-[10px] font-normal">SKU</span></span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-slate-500 block text-[9px] sm:text-[10px] uppercase font-bold">ĐÃ QUAY</span>
+                                    <span class="font-sans font-bold text-gold-dark text-base sm:text-lg">278 <span class="text-[10px] font-normal">SKU</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2.5 sm:h-3 overflow-hidden border border-slate-300">
+                            <div class="bg-gold h-full rounded-full transition-all duration-1000" style="width: 51.48%"></div>
+                        </div>
+                        <div class="text-right text-[11px] sm:text-xs font-bold text-gold-dark mt-1.5">51.48% Hoàn thành</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tables Breakdown -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto font-sans">
+                
+                <!-- Table 1: Số lượng SKU đã chụp -->
+                <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-beige-border">
+                        <i class="fa-solid fa-camera text-gold text-lg sm:text-xl"></i>
+                        <h4 class="font-serif font-bold text-lg sm:text-xl text-navy">Số lượng SKU đã chụp</h4>
+                    </div>
+                    <div class="overflow-x-auto no-scrollbar">
+                        <table class="w-full text-left text-xs sm:text-sm min-w-[280px]">
+                            <thead>
+                                <tr class="text-slate-500 border-b border-beige-border uppercase text-[10px] sm:text-[11px]">
+                                    <th class="py-2 font-bold">BRAND</th>
+                                    <th class="py-2 font-bold text-right">ĐÃ CHỤP</th>
+                                    <th class="py-2 font-bold text-right">TỶ LỆ</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-beige-border/60 text-slate-700">
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">PNJ</td>
+                                    <td class="text-right whitespace-nowrap">975</td>
+                                    <td class="text-right text-navy font-bold">36.8%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">KDQT</td>
+                                    <td class="text-right whitespace-nowrap">852</td>
+                                    <td class="text-right text-navy font-bold">32.1%</td>
+                                </tr>
+                                <tr class="text-slate-500">
+                                    <td class="py-1.5 pl-3 sm:pl-4">• Disney | PNJ</td>
+                                    <td class="text-right whitespace-nowrap">470</td>
+                                    <td class="text-right">17.7%</td>
+                                </tr>
+                                <tr class="text-slate-500">
+                                    <td class="py-1.5 pl-3 sm:pl-4">• Sanrio</td>
+                                    <td class="text-right whitespace-nowrap">298</td>
+                                    <td class="text-right">11.2%</td>
+                                </tr>
+                                <tr class="text-slate-500">
+                                    <td class="py-1.5 pl-3 sm:pl-4">• Trendy Collections</td>
+                                    <td class="text-right whitespace-nowrap">84</td>
+                                    <td class="text-right">3.2%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">STYLE by PNJ</td>
+                                    <td class="text-right whitespace-nowrap">691</td>
+                                    <td class="text-right text-navy font-bold">26.0%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">MANCODE by PNJ</td>
+                                    <td class="text-right whitespace-nowrap">97</td>
+                                    <td class="text-right text-navy font-bold">3.7%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">PNJ Watch</td>
+                                    <td class="text-right whitespace-nowrap">26</td>
+                                    <td class="text-right text-navy font-bold">1.0%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">ARTA by PNJ</td>
+                                    <td class="text-right whitespace-nowrap">12</td>
+                                    <td class="text-right text-navy font-bold">0.5%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="bg-navy text-white font-bold rounded-lg">
+                                    <td class="py-2.5 px-3 rounded-l-lg uppercase text-xs">TỔNG ĐÃ CHỤP</td>
+                                    <td class="py-2.5 text-right whitespace-nowrap">2,653</td>
+                                    <td class="py-2.5 px-3 text-right rounded-r-lg">100%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Table 2: Số lượng SKU đã quay -->
+                <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-beige-border">
+                        <i class="fa-solid fa-video text-gold text-lg sm:text-xl"></i>
+                        <h4 class="font-serif font-bold text-lg sm:text-xl text-navy">Số lượng SKU đã quay</h4>
+                    </div>
+                    <div class="overflow-x-auto no-scrollbar">
+                        <table class="w-full text-left text-xs sm:text-sm min-w-[280px]">
+                            <thead>
+                                <tr class="text-slate-500 border-b border-beige-border uppercase text-[10px] sm:text-[11px]">
+                                    <th class="py-2 font-bold">BRAND</th>
+                                    <th class="py-2 font-bold text-right">ĐÃ QUAY</th>
+                                    <th class="py-2 font-bold text-right">TỶ LỆ</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-beige-border/60 text-slate-700">
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">PNJ</td>
+                                    <td class="text-right whitespace-nowrap">165</td>
+                                    <td class="text-right text-navy font-bold">59.4%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">KDQT</td>
+                                    <td class="text-right whitespace-nowrap">85</td>
+                                    <td class="text-right text-navy font-bold">30.6%</td>
+                                </tr>
+                                <tr class="text-slate-500">
+                                    <td class="py-1.5 pl-3 sm:pl-4">• Disney | PNJ</td>
+                                    <td class="text-right whitespace-nowrap">40</td>
+                                    <td class="text-right">14.4%</td>
+                                </tr>
+                                <tr class="text-slate-500">
+                                    <td class="py-1.5 pl-3 sm:pl-4">• Sanrio</td>
+                                    <td class="text-right whitespace-nowrap">30</td>
+                                    <td class="text-right">10.8%</td>
+                                </tr>
+                                <tr class="text-slate-500">
+                                    <td class="py-1.5 pl-3 sm:pl-4">• Trendy Collections</td>
+                                    <td class="text-right whitespace-nowrap">15</td>
+                                    <td class="text-right">5.4%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">STYLE by PNJ</td>
+                                    <td class="text-right whitespace-nowrap">15</td>
+                                    <td class="text-right text-navy font-bold">5.4%</td>
+                                </tr>
+                                <tr class="font-semibold text-slate-900">
+                                    <td class="py-2">MANCODE by PNJ</td>
+                                    <td class="text-right whitespace-nowrap">13</td>
+                                    <td class="text-right text-navy font-bold">4.7%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="bg-navy text-white font-bold rounded-lg">
+                                    <td class="py-2.5 px-3 rounded-l-lg uppercase text-xs">TỔNG ĐÃ QUAY</td>
+                                    <td class="py-2.5 text-right whitespace-nowrap">278</td>
+                                    <td class="py-2.5 px-3 text-right rounded-r-lg">100%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB CONTENT: CONTENT - DỰ ÁN NỔI BẬT -->
+        <div id="content-content-du-an" class="tab-content">
+            <div class="text-center mb-6 sm:mb-10">
+                <h2 class="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-navy uppercase tracking-wider mb-2">DỰ ÁN NỔI BẬT</h2>
+                <p class="font-sans text-slate-600 text-xs sm:text-sm md:text-base font-medium italic">Truyền tải thông điệp thương hiệu & gắn kết khách hàng</p>
+                <div class="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2 sm:mt-3"></div>
+            </div>
+
+            <!-- Content Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 font-sans">
+                
+                <!-- Project Content 1 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="text-center mb-4 sm:mb-6">
+                            <span class="text-[10px] sm:text-xs font-bold text-gold uppercase bg-beige-subtle px-3 py-1 rounded-full border border-beige-border">CONTENT DỰ ÁN 01</span>
+                            <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy uppercase mt-2.5 leading-snug">CHIẾN DỊCH TRUYỀN THÔNG T7</h3>
+                            <p class="text-xs text-slate-500 font-medium mt-1">Copywriting & Storytelling</p>
+                        </div>
+
+                        <div class="bg-beige-subtle/60 border border-dashed border-beige-border rounded-xl p-6 sm:p-8 text-center min-h-[180px] sm:min-h-[220px] flex flex-col items-center justify-center">
+                            <i class="fa-regular fa-pen-to-square text-2xl sm:text-3xl text-gold mb-2.5"></i>
+                            <span class="font-bold text-slate-700 text-sm sm:text-base mb-1">NỘI DUNG SẼ ĐƯỢC CẬP NHẬT SAU</span>
+                            <p class="text-xs text-slate-500">Khu vực dành cho kết quả truyền thông, bài viết Facebook, PR, Script Video...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Content 2 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="text-center mb-4 sm:mb-6">
+                            <span class="text-[10px] sm:text-xs font-bold text-gold uppercase bg-beige-subtle px-3 py-1 rounded-full border border-beige-border">CONTENT DỰ ÁN 02</span>
+                            <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy uppercase mt-2.5 leading-snug">KỊCH BẢN MEDIA & VIDEO</h3>
+                            <p class="text-xs text-slate-500 font-medium mt-1">Sáng tạo nội dung Đa kênh</p>
+                        </div>
+
+                        <div class="bg-beige-subtle/60 border border-dashed border-beige-border rounded-xl p-6 sm:p-8 text-center min-h-[180px] sm:min-h-[220px] flex flex-col items-center justify-center">
+                            <i class="fa-solid fa-clapperboard text-2xl sm:text-3xl text-gold mb-2.5"></i>
+                            <span class="font-bold text-slate-700 text-sm sm:text-base mb-1">NỘI DUNG SẼ ĐƯỢC CẬP NHẬT SAU</span>
+                            <p class="text-xs text-slate-500">Khu vực dành cho chỉ số tương tác, lượt xem, kịch bản reels / tiktok...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Content 3 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="text-center mb-4 sm:mb-6">
+                            <span class="text-[10px] sm:text-xs font-bold text-gold uppercase bg-beige-subtle px-3 py-1 rounded-full border border-beige-border">CONTENT DỰ ÁN 03</span>
+                            <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy uppercase mt-2.5 leading-snug">NỘI DUNG CHƯƠNG TRÌNH PAYDAY</h3>
+                            <p class="text-xs text-slate-500 font-medium mt-1">Nội dung kích thích chuyển đổi</p>
+                        </div>
+
+                        <div class="bg-beige-subtle/60 border border-dashed border-beige-border rounded-xl p-6 sm:p-8 text-center min-h-[180px] sm:min-h-[220px] flex flex-col items-center justify-center">
+                            <i class="fa-solid fa-bullhorn text-2xl sm:text-3xl text-gold mb-2.5"></i>
+                            <span class="font-bold text-slate-700 text-sm sm:text-base mb-1">NỘI DUNG SẼ ĐƯỢC CẬP NHẬT SAU</span>
+                            <p class="text-xs text-slate-500">Khu vực dành cho kết quả SMS, Zalo ZNS, E-brochure content...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB CONTENT: CONTENT - VAI TRÒ CREATIVE HUB -->
+        <div id="content-content-vai-tro" class="tab-content">
+            <div class="text-center mb-6 sm:mb-10">
+                <h2 class="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-navy uppercase tracking-wider mb-2">VAI TRÒ CREATIVE HUB</h2>
+                <p class="font-sans text-slate-600 text-xs sm:text-sm md:text-base font-medium italic">Định hướng ngôn từ & Đồng hành cùng các Phòng ban</p>
+                <div class="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2 sm:mt-3"></div>
+            </div>
+
+            <!-- Content Role Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 font-sans">
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-navy text-white flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-base sm:text-lg">OMNI-MKT</h3>
+                    </div>
+                    <div class="p-5 sm:p-6 text-center border border-dashed border-beige-border bg-beige-subtle/50 rounded-xl">
+                        <span class="text-xs text-slate-500 font-medium italic">[Nội dung hỗ trợ truyền thông Omni-MKT sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gold text-white flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-base sm:text-lg">KHCS</h3>
+                    </div>
+                    <div class="p-5 sm:p-6 text-center border border-dashed border-beige-border bg-beige-subtle/50 rounded-xl">
+                        <span class="text-xs text-slate-500 font-medium italic">[Nội dung hỗ trợ truyền thông KHCS sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-crimson text-white flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-base sm:text-lg">PNS</h3>
+                    </div>
+                    <div class="p-5 sm:p-6 text-center border border-dashed border-beige-border bg-beige-subtle/50 rounded-xl">
+                        <span class="text-xs text-slate-500 font-medium italic">[Nội dung hỗ trợ truyền thông PNS sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-navy text-white flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-base sm:text-lg">RETAIL MKT</h3>
+                    </div>
+                    <div class="p-5 sm:p-6 text-center border border-dashed border-beige-border bg-beige-subtle/50 rounded-xl">
+                        <span class="text-xs text-slate-500 font-medium italic">[Nội dung hỗ trợ truyền thông Retail MKT sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gold text-white flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-base sm:text-lg">CLHH</h3>
+                    </div>
+                    <div class="p-5 sm:p-6 text-center border border-dashed border-beige-border bg-beige-subtle/50 rounded-xl">
+                        <span class="text-xs text-slate-500 font-medium italic">[Nội dung hỗ trợ truyền thông CLHH sẽ điền sau]</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-beige-border">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-crimson text-white flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3 class="font-bold text-navy text-base sm:text-lg">CX - CS</h3>
+                    </div>
+                    <div class="p-5 sm:p-6 text-center border border-dashed border-beige-border bg-beige-subtle/50 rounded-xl">
+                        <span class="text-xs text-slate-500 font-medium italic">[Nội dung hỗ trợ truyền thông CX-CS sẽ điền sau]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT: CONTENT - HỖ TRỢ TRUYỀN THÔNG GTM -->
+        <div id="content-content-gtm" class="tab-content">
+            <div class="text-center mb-6 sm:mb-10">
+                <h2 class="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-navy uppercase tracking-wider mb-2">HỖ TRỢ TRUYỀN THÔNG GTM</h2>
+                <p class="font-sans text-slate-600 text-xs sm:text-sm md:text-base font-medium italic">Go-To-Market Communication Support</p>
+                <div class="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2 sm:mt-3"></div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 sm:p-8 shadow-soft-card border border-beige-border max-w-4xl mx-auto font-sans">
+                <div class="text-center py-8 sm:py-12 border-2 border-dashed border-beige-border bg-beige-subtle/50 rounded-xl px-4">
+                    <i class="fa-solid fa-rocket text-4xl sm:text-5xl text-gold mb-3 sm:mb-4"></i>
+                    <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy mb-2">KẾ HOẠCH & HIỆU QUẢ TRUYỀN THÔNG GTM</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto mb-5 sm:mb-6">Nội dung báo cáo chi tiết các chiến dịch tung hàng GTM, tài liệu đào tạo bán hàng, thông điệp truyền thông sẽ được bổ sung tại đây.</p>
+                    <span class="bg-beige-subtle text-slate-600 font-bold text-xs uppercase px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-beige-border">
+                        [Nội dung bên trong sẽ điền sau]
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="w-full bg-white text-slate-600 border-t border-beige-border mt-12 sm:mt-16 py-5 sm:py-6 font-sans">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+            <div>
+                <p class="font-bold text-xs sm:text-sm tracking-wider uppercase text-navy">BÁO CÁO HOẠT ĐỘNG CREATIVE HUB</p>
+                <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Khối KHBL - Creative Hub Supporting Center</p>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-500">
+                <span>&copy; Báo cáo nội bộ. Thiết kế sẵn sàng cho GitHub Pages.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // State management
+        let currentMainTab = 'design';
+        let currentSubTabs = {
+            design: 'du-an',
+            content: 'du-an'
+        };
+
+        // Switch Main Tab (Team Design vs Team Content)
+        function switchMainTab(tabName) {
+            currentMainTab = tabName;
+
+            const btnDesign = document.getElementById('mainTab-design');
+            const btnContent = document.getElementById('mainTab-content');
+
+            if (tabName === 'design') {
+                btnDesign.className = 'flex-1 px-3 sm:px-7 py-2.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 bg-crimson text-white shadow-md active:scale-[0.98]';
+                btnContent.className = 'flex-1 px-3 sm:px-7 py-2.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 text-slate-600 hover:text-navy active:scale-[0.98]';
+
+                document.getElementById('subTabsNav-design').classList.remove('hidden');
+                document.getElementById('subTabsNav-design').classList.add('flex');
+                document.getElementById('subTabsNav-content').classList.add('hidden');
+                document.getElementById('subTabsNav-content').classList.remove('flex');
+            } else {
+                btnContent.className = 'flex-1 px-3 sm:px-7 py-2.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 bg-crimson text-white shadow-md active:scale-[0.98]';
+                btnDesign.className = 'flex-1 px-3 sm:px-7 py-2.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 text-slate-600 hover:text-navy active:scale-[0.98]';
+
+                document.getElementById('subTabsNav-content').classList.remove('hidden');
+                document.getElementById('subTabsNav-content').classList.add('flex');
+                document.getElementById('subTabsNav-design').classList.add('hidden');
+                document.getElementById('subTabsNav-design').classList.remove('flex');
+            }
+
+            renderTabs();
+        }
+
+        // Switch Sub Tab
+        function switchSubTab(mainTab, subTabName) {
+            currentSubTabs[mainTab] = subTabName;
+            renderTabs();
+        }
+
+        // Render Active Views & SubTab Styles
+        function renderTabs() {
+            // Hide all tab content
+            const allContents = document.querySelectorAll('.tab-content');
+            allContents.forEach(el => el.classList.remove('active'));
+
+            // Show current tab content
+            const activeSubTab = currentSubTabs[currentMainTab];
+            const activeContentId = `content-${currentMainTab}-${activeSubTab}`;
+            const activeContent = document.getElementById(activeContentId);
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+
+            // Update sub-tab button styling for Design or Content
+            if (currentMainTab === 'design') {
+                updateSubTabButtons('design', ['du-an', 'vai-tro', 'powerhouse']);
+            } else {
+                updateSubTabButtons('content', ['du-an', 'vai-tro', 'gtm']);
+            }
+        }
+
+        function updateSubTabButtons(mainTab, subTabsArray) {
+            subTabsArray.forEach(subTab => {
+                const btn = document.getElementById(`subTab-${mainTab}-${subTab}`);
+                if (btn) {
+                    if (currentSubTabs[mainTab] === subTab) {
+                        btn.className = 'flex-1 min-w-[100px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight bg-navy text-white shadow';
+                    } else {
+                        btn.className = 'flex-1 min-w-[100px] px-2.5 sm:px-5 py-2 rounded-xl sm:rounded-full font-sans text-[11px] xs:text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 text-center leading-tight text-slate-600 hover:text-navy hover:bg-beige-subtle';
+                    }
+                }
+            });
+        }
+
+        // Initialize view on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderTabs();
+        });
+    </script>
+</body>
+</html>
