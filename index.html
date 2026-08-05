@@ -456,7 +456,7 @@
                         <div id="omniMktSlider" class="flex gap-2 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory rounded-xl">
                             <!-- Image 1: Ngày đôi 8.8 -->
                             <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
-                                <img src="1200x628 KPN 88.png" alt="1200x628 KPN 88" class="w-full h-full object-cover" onerror="this.src='1200x628 KPN 88_3.jpg';">
+                                <img src="1200x628 KPN 88.png" alt="1200x628 KPN 88" class="w-full h-full object-cover" onerror="this.src='1200x628 KPN 88_3.g';">
                             </div>
                             <!-- Image 2: Trang sức Tháng 7 & Retail -->
                             <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
@@ -579,10 +579,49 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
-                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị POSM / Retail sẽ điền sau]</span>
+                    <!-- 5 Horizontal Banner Slider for RETAIL MKT -->
+                    <div class="relative group mt-4 pt-3 bg-beige-subtle/80 rounded-2xl p-2 border border-beige-border overflow-hidden shadow-inner">
+                        <div id="retailMktSlider" class="flex gap-2 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory rounded-xl">
+                            <!-- Image 1: CTTS T7 & Retail -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="1200 x 628 KPN CTT& Retail.png" alt="1200 x 628 KPN CTT& Retail" class="w-full h-full object-cover" onerror="this.src='1200 x 628 KPN CTT& Retail.jpg';">
+                            </div>
+                            <!-- Image 2: Disney -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="1200x628_Disney.png" alt="1200x628_Disney" class="w-full h-full object-cover" onerror="this.src='1200x628_Disney.jpg';">
+                            </div>
+                            <!-- Image 3: MANCODE -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="1200 x 628_MANCODE.png" alt="1200 x 628_MANCODE" class="w-full h-full object-cover" onerror="this.src='1200 x 628_MANCODE.jpg';">
+                            </div>
+                            <!-- Image 4: ARTA -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="1200 x 628_arta.png" alt="1200 x 628_arta" class="w-full h-full object-cover" onerror="this.src='1200 x 628_arta.jpg';">
+                            </div>
+                            <!-- Image 5: STYLE -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="1200 x 628_Style.png" alt="1200 x 628_Style" class="w-full h-full object-cover" onerror="this.src='1200 x 628_Style.jpg';">
+                            </div>
+                        </div>
+
+                        <!-- Left Arrow Button -->
+                        <button onclick="slideCarousel('retailMktSlider', 'left')" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 bg-navy/85 hover:bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md backdrop-blur-sm transition-all duration-200 hover:scale-110 active:scale-95 z-10">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <!-- Right Arrow Button -->
+                        <button onclick="slideCarousel('retailMktSlider', 'right')" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 bg-navy/85 hover:bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md backdrop-blur-sm transition-all duration-200 hover:scale-110 active:scale-95 z-10">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Single Landscape Video (16:9) -->
+                    <div class="mt-3 pt-2 border-t border-beige-border/60">
+                        <div class="aspect-video w-full rounded-xl overflow-hidden border border-beige-border shadow-xs bg-black/5">
+                            <video src="RETAILL MKT Sub brand_15.mp4" controls autoplay loop muted playsinline class="w-full h-full object-cover rounded-xl"></video>
+                        </div>
                     </div>
                 </div>
+            
 
                 <!-- Department 6: CX-CS -->
                 <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-soft-card border border-beige-border hover:border-gold/60 transition-all flex flex-col justify-between">
@@ -1010,9 +1049,9 @@
             content: 'du-an'
         };
 
-        // Slide logic for OMNI MKT banner carousel
-        function slideOmni(direction) {
-            const slider = document.getElementById('omniMktSlider');
+        // Generic Carousel Slide function
+        function slideCarousel(sliderId, direction) {
+            const slider = document.getElementById(sliderId);
             if (slider) {
                 const scrollAmount = slider.clientWidth;
                 if (direction === 'left') {
@@ -1021,6 +1060,11 @@
                     slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
                 }
             }
+        }
+
+        // Backward compatibility for OMNI MKT slider
+        function slideOmni(direction) {
+            slideCarousel('omniMktSlider', direction);
         }
 
         // Switch Main Tab (Team Design vs Team Content)
