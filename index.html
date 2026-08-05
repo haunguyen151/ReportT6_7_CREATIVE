@@ -516,8 +516,47 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="mt-4 pt-3 bg-beige-subtle rounded-xl p-3 text-center border border-beige-border">
-                        <span class="text-xs text-slate-400 italic">[Khu vực hiển thị hình ảnh / Poster sẽ điền sau]</span>
+
+                    <!-- 5 Horizontal Banner Slider for KHCS -->
+                    <div class="relative group mt-4 pt-3 bg-beige-subtle/80 rounded-2xl p-2 border border-beige-border overflow-hidden shadow-inner">
+                        <div id="khcsSlider" class="flex gap-2 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory rounded-xl">
+                            <!-- Image 1: Hellokitty T6 -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="KHCS-CTTĐ Hellokitty T6.jpg" alt="KHCS-CTTĐ Hellokitty T6" class="w-full h-full object-cover" onerror="this.src='KHCS-CTTĐ Hellokitty T6.png';">
+                            </div>
+                            <!-- Image 2: Trendy T6 -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="KHCS-CTTĐ Trendy T6.jpg" alt="KHCS-CTTĐ Trendy T6" class="w-full h-full object-cover" onerror="this.src='KHCS-CTTĐ Trendy T6.png';">
+                            </div>
+                            <!-- Image 3: Brand 7-8 -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="KHCS-CTTĐ Brand 7-8.jpg" alt="KHCS-CTTĐ Brand 7-8" class="w-full h-full object-cover" onerror="this.src='KHCS-CTTĐ Brand 7-8.png';">
+                            </div>
+                            <!-- Image 4: Poster Mancode T6 -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="KHCS-Poster Mancode T6.jpg" alt="KHCS-Poster Mancode T6" class="w-full h-full object-cover" onerror="this.src='KHCS-Poster Mancode T6.png';">
+                            </div>
+                            <!-- Image 5: VOC Award3 -->
+                            <div class="snap-center shrink-0 w-full aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
+                                <img src="KHCS-CTTĐ VOC Award3.jpg" alt="KHCS-CTTĐ VOC Award3" class="w-full h-full object-cover" onerror="this.src='KHCS-CTTĐ VOC Award3.png';">
+                            </div>
+                        </div>
+
+                        <!-- Left Arrow Button -->
+                        <button onclick="slideCarousel('khcsSlider', 'left')" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 bg-navy/85 hover:bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md backdrop-blur-sm transition-all duration-200 hover:scale-110 active:scale-95 z-10">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <!-- Right Arrow Button -->
+                        <button onclick="slideCarousel('khcsSlider', 'right')" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 bg-navy/85 hover:bg-navy text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md backdrop-blur-sm transition-all duration-200 hover:scale-110 active:scale-95 z-10">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Vinh danh Hội An image bottom section -->
+                    <div class="mt-3 pt-2 border-t border-beige-border/60">
+                        <div class="aspect-[164/100] w-full rounded-xl overflow-hidden border border-beige-border shadow-xs bg-white flex items-center justify-center">
+                            <img src="Vinh danh Hoi An.png" alt="Vinh danh Hoi An" class="w-full h-full object-contain p-1 rounded-xl" onerror="this.src='KHCS.jpg';">
+                        </div>
                     </div>
                 </div>
 
@@ -561,10 +600,12 @@
                     <!-- 4 Horizontal Banner Slider for PNS -->
                     <div class="relative group mt-4 pt-3 bg-beige-subtle/80 rounded-2xl p-2 border border-beige-border overflow-hidden shadow-inner">
                         <div id="pnsSlider" class="flex gap-2 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory rounded-xl">
-                            <!-- Image 1: 1200x450payday.jpg -->
+                            
+                            <!-- Image 1: 1200x450PNS_Spin.jpg -->
                             <div class="snap-center shrink-0 w-full aspect-[1200/450] sm:aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
-                                <img src="1200x450payday.jpg" alt="1200x450payday" class="w-full h-full object-cover" onerror="this.src='1200x450payday.png';">
+                                <img src="1200x450PNS_Spin.jpg" alt="1200x450PNS_Spin" class="w-full h-full object-cover" onerror="this.src='1200x450PNS_Spin.png';">
                             </div>
+                            
                             <!-- Image 2: 1200x450 PNS.jpg -->
                             <div class="snap-center shrink-0 w-full aspect-[1200/450] sm:aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
                                 <img src="1200x450 PNS.jpg" alt="1200x450 PNS" class="w-full h-full object-cover" onerror="this.src='1200x450 PNS.png';">
@@ -573,9 +614,9 @@
                             <div class="snap-center shrink-0 w-full aspect-[1200/450] sm:aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
                                 <img src="1200x450.jpg" alt="1200x450" class="w-full h-full object-cover" onerror="this.src='1200x450.png';">
                             </div>
-                            <!-- Image 4: 1200x450PNS_Spin.jpg -->
+                            <!-- Image 4: 1200x450payday.jpg -->
                             <div class="snap-center shrink-0 w-full aspect-[1200/450] sm:aspect-[1200/628] rounded-xl overflow-hidden border border-beige-border/60 shadow-xs bg-white">
-                                <img src="1200x450PNS_Spin.jpg" alt="1200x450PNS_Spin" class="w-full h-full object-cover" onerror="this.src='1200x450PNS_Spin.png';">
+                                <img src="1200x450payday.jpg" alt="1200x450payday" class="w-full h-full object-cover" onerror="this.src='1200x450payday.png';">
                             </div>
                         </div>
 
